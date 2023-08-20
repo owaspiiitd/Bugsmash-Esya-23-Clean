@@ -1,0 +1,14 @@
+#!/bin/sh
+
+sh -c "cd /app; gunicorn server:app" &
+
+sleep 2
+cd /test
+for testcase in *.py;
+do
+	python3 /test/$testcase 2> /dev/null
+	if [ $? -ne 0 ]
+	then
+        exit 1
+	fi
+done

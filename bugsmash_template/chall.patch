@@ -1,0 +1,11 @@
+diff --git a/main.py b/main.py
+index a89c876..67af324 100644
+--- a/main.py
++++ b/main.py
+@@ -13,4 +13,6 @@ def hello_world_greet(name):
+ 
+ @app.route("/calc/<expr>")
+ def hello_world_calc(expr):
++    if 'os' in expr:
++        return '0'
+     return str(eval(expr))

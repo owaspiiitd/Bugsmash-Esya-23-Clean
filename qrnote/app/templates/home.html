@@ -1,0 +1,37 @@
+<!doctype html>
+<title>QRnote</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<img class="logo" src="{{ url_for('static', filename='logo.png') }}">
+<h1>Welcome to QRnote</h1>
+<p>QRnote is a secure storage platform for all of your valuable plaintext.</p>
+<p>How to use?</p>
+    <div>Submit your content</div>
+    <div>Save your qr-code</div>
+    <div>Use your qr-code to etrieve your content</div>
+<p>Easy!</p>
+<hr/>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p class="flash">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<h2>Make a note</h2>
+<p>Enter your plaintext below:</p>
+<form method="post" enctype="multipart/form-data">
+    <textarea name="content" rows="10" cols="60" placeholder="Today, I participated in BugSmash..."></textarea>
+    <div>
+        <input type="submit" value="Post">
+    </div>
+</form>
+
+<h2>View a note</h2>
+<p>Upload your ticket to retrieve your plaintext:</p>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="ticket">
+    <input type="submit" value="Scan">
+</form>

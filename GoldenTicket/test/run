@@ -1,0 +1,6 @@
+#!/bin/sh
+
+python3 test.py in1 out1
+python3 test.py in2 out2
+python3 test.py in3 out3
+python3 test.py in4 out4

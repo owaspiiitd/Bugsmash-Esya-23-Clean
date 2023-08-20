@@ -1,0 +1,14 @@
+#!/bin/sh
+
+sh -c "php -S 127.0.0.1:8000 -t /app" &
+
+sleep 2
+cd /test
+for testcase in *.py;
+do
+	python3 /test/$testcase 2> /dev/null
+	if [ $? -ne 0 ]
+	then
+		exit 1
+	fi
+done

@@ -1,0 +1,18 @@
+cd /app
+nasm -f elf64 chal.asm; ld chal.o -o chal;
+wrong="Enter PIN: Wrong!"
+correct="Enter PIN: Correct!"
+output1=$(printf '1234\n' | ./chal)
+output2=$(printf '1235\n' | ./chal)
+count=0
+if [ "$correct" = "$output1" ]; then
+	count=$(($count+1))
+fi
+if [ "$wrong" = "$output2" ]; then
+	count=$(($count+1))
+fi
+if [ "$count" = "2" ]; then
+	exit 0
+else
+	exit 1
+fi

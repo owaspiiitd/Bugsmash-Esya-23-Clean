@@ -1,0 +1,4 @@
+#!/bin/sh
+
+python3 /home/test/test1.py
+python3 /home/test/test2.py

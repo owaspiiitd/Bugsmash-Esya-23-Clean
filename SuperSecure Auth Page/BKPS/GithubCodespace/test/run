@@ -1,0 +1,7 @@
+#!/bin/sh
+
+python3 /test/testCases.py
+if [ $? -ne 0 ]
+then
+    exit 1
+fi

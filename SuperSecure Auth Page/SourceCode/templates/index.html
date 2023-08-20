@@ -1,0 +1,21 @@
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+<body>
+    <div class="App">
+        <header class="App-header">
+            <center>Super Secure Login Page</center><br><br>
+            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
+            
+            <center><b><u>Username</u> </b><br>admin<br><br>
+            <center><b>Password:</b><br>
+                <form action="/calc/" method="post">
+                <input type="password" name="password"><br><br>
+                <input type="submit" value="submit"></form>
+             </center>
+        </header>
+    </div>
+</body>
+
+</html>

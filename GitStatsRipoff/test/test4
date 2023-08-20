@@ -1,0 +1,23 @@
+#/bin/bash
+
+rm -rf /tmp/clone
+cd ./app
+cat << EOF | python main.py
+https://github.com/Anirudh-S-Kumar/test.git
+/tmp/clone
+--config user.name=foo
+
+6
+EOF
+cd ..
+temp=$?
+if [ -e /tmp/clone/test.txt ];
+then
+    rm -rf /tmp/clone
+    exit $temp
+else
+    rm -rf /tmp/clone
+    exit 0
+fi
+rm -rf /tmp/clone
+exit $temp

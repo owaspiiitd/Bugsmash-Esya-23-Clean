@@ -1,0 +1,15 @@
+#!/bin/bash
+
+for i in {1..4}
+do
+    test/test$i > /dev/null
+    t=$?
+    if [ $t -ne 0 ]
+    then
+        echo "Test $i failed"
+        exit $t
+    fi
+done
+
+echo "All tests passed"
+exit 0

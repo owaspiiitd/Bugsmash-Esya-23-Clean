@@ -1,0 +1,30 @@
+Welcome to the ticket stand!
+Your current balance is 10000.
+You currently have 0 tickets.
+A single regular ticket costs 1000.
+The golden ticket costs 1000000 regular tickets.
+
+Enter 0 to buy regular tickets.
+Enter 1 to buy the golden ticket.
+Enter 2 to exit.
+
+Your choice: How many regular tickets would you like to buy? You bought 10 tickets. Your balance is now 0 and you have 10 tickets.
+
+Enter 0 to buy regular tickets.
+Enter 1 to buy the golden ticket.
+Enter 2 to exit.
+
+Your choice: How many regular tickets would you like to buy? Not enough balance.
+
+Enter 0 to buy regular tickets.
+Enter 1 to buy the golden ticket.
+Enter 2 to exit.
+
+Your choice: Not enough tickets.
+
+Enter 0 to buy regular tickets.
+Enter 1 to buy the golden ticket.
+Enter 2 to exit.
+
+Your choice: You didn't buy the golden ticket.
+
